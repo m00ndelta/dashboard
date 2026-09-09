@@ -1,0 +1,14 @@
+name: NVIDIA DeepSeek V4 Flash
+version: 0.0.1
+schema: v1
+
+models:
+  - name: DeepSeek V4 Flash
+    provider: openai
+    model: deepseek-ai/deepseek-v4-flash-0731
+    apiBase: https://integrate.api.nvidia.com/v1
+    apiKey: ${{ secrets.NVIDIA_API_KEY }}
+    roles:
+      - chat
+      - edit
+      - apply
