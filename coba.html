@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline": "#849396", "primary-fixed-dim": "#00daf3", "primary-container": "#00e5ff", "on-secondary-fixed": "#001a42", "primary-fixed": "#9cf0ff", "on-surface": "#e1e2ec", "surface-tint": "#00daf3", "on-tertiary-fixed-variant": "#653e00", "on-primary-fixed": "#001f24", "on-secondary-container": "#e6ecff", "tertiary-fixed-dim": "#ffb95f", "surface-bright": "#363941", "inverse-primary": "#006875", "on-surface-variant": "#bac9cc", "on-tertiary-container": "#7e4e00", "surface-container-highest": "#32353d", "inverse-on-surface": "#2d3038", "on-primary": "#00363d", "secondary-container": "#0566d9", "tertiary": "#ffe9d3", "on-tertiary": "#472a00", "on-secondary-fixed-variant": "#004395", "on-background": "#e1e2ec", "secondary-fixed-dim": "#adc6ff", "on-error": "#690005", "error": "#ffb4ab", "on-error-container": "#ffdad6", "on-primary-container": "#00626e", "inverse-surface": "#e1e2ec", "surface-variant": "#32353d", "background": "#10131a", "on-secondary": "#002e6a", "secondary": "#adc6ff", "surface-container-low": "#191b23", "primary": "#c3f5ff", "surface-container-lowest": "#0b0e15", "surface-container-high": "#272a32", "outline-variant": "#3b494c", "secondary-fixed": "#d8e2ff", "surface-container": "#1d1f27", "surface-dim": "#10131a", "on-tertiary-fixed": "#2a1700", "on-primary-fixed-variant": "#004f58", "tertiary-container": "#ffc681", "tertiary-fixed": "#ffddb8", "error-container": "#93000a", "surface": "#10131a" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-2xl": "2rem", "space-sm": "0.5rem", "space-lg": "1rem", "gutter-compact": "0.5rem", "container-padding": "1rem", "space-xs": "0.25rem", "space-2xs": "0.125rem", "space-xl": "1.5rem", "gutter-default": "0.75rem", "space-md": "0.75rem" }, "fontFamily": { "mono-sm": [ "JetBrains Mono" ], "mono-lg": [ "JetBrains Mono" ], "body-md": [ "Inter" ], "label-caps": [ "JetBrains Mono" ], "headline-md": [ "Inter" ], "body-lg": [ "Inter" ], "mono-md": [ "JetBrains Mono" ], "headline-lg-mobile": [ "Inter" ], "display-lg": [ "Inter" ], "headline-sm": [ "Inter" ], "headline-lg": [ "Inter" ], "body-sm": [ "Inter" ] }, "fontSize": { "mono-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "400" } ], "mono-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "body-md": [ "13px", { "lineHeight": "18px", "fontWeight": "400" } ], "label-caps": [ "10px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "headline-md": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "body-lg": [ "15px", { "lineHeight": "22px", "fontWeight": "400" } ], "mono-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-lg-mobile": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "display-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-sm": [ "15px", { "lineHeight": "20px", "fontWeight": "600" } ], "headline-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface select-none antialiased"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md"><div class="h-16 w-full px-container-padding flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="Spectra OSINT Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIo2DqG7zXYlZUC8x7bZ4W9z75vXe8vHjzHj11MuJSBRtGbswBYEZxPjfe8uqJjJRB69bF7vG41w0TFtuv-J7teghUv9VuCWExHRmlgR9aHHrKg6YK6zloemgjNPjeKNIo1P_uO0l8CbBfVkPKKAe8rqg_h9cu0pzPB52nCdevFUMFZycGoGYqlTOJ_LD7kPrcwkWhB-zX6a1G2wM1Xo56_orkJf6dg5Gh6epuK7XR5hV3ao4M7h5c4Q"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">SPECTRA OSINT</span><span class="font-mono-sm text-mono-sm text-outline-variant">//</span><span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">TACTICAL INTELLIGENCE COMMAND</span></div><div class="flex items-center gap-space-sm"><span class="px-space-xs py-space-2xs bg-surface-container-high rounded text-error font-label-caps text-label-caps uppercase border-l-2 border-error">SECRET // REL TO INTEL COMMUNITY</span><span class="font-mono-sm text-mono-sm text-outline hidden xl:inline-block">ORBIT_GRID // EPSG:4326</span></div></div></div><div class="hidden lg:flex items-center gap-space-lg"><div class="flex items-center gap-space-xs px-space-sm py-space-2xs bg-surface-container rounded"><span class="h-2 w-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span><span class="font-label-caps text-label-caps text-tertiary-fixed-dim uppercase">THREAT: ELEVATED (DEFCON 3)</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-2xs bg-surface-container rounded"><span class="material-symbols-outlined text-primary text-base">satellite_alt</span><span class="font-label-caps text-label-caps text-on-surface-variant uppercase">ACTIVE:</span><span class="font-mono-sm text-mono-sm text-primary">SAR-4 / EO-9 / SENTINEL</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-2xs bg-surface-container rounded"><span class="material-symbols-outlined text-outline text-base">schedule</span><span class="font-mono-md text-mono-md text-on-surface">14:28:49 UTC</span><span class="font-mono-sm text-mono-sm text-outline-variant">[ZULU]</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex flex-col items-end text-right"><span class="font-headline-sm text-headline-sm text-on-surface">Senior Analyst - Unit 07</span><span class="font-mono-sm text-mono-sm text-primary">AUTH: LEVEL-4 TS/SCI</span></div><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary-container/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhpyUPFFnEdEnD_jPGPUNd6kZ_iL5jQdcRNDLTMmaIbjLE4rQa9ZxGRyAQwAJath5bQ6-cjzMqVAmyf-1M5LHySB9YBHckuNwoZdoo2XIAWs3CJBLTHjO0jSpCeTSd4C8hCtJksgxIY7ONC-qsL9VYvHYzgoDFAhJ6RTJJ4pCUM376vg_IoMIixUVF0nB4s3fbg6bOoUG3fRHrsTQBfHRjhf9Sa9y3H_J3uxGkzYj31RHn6z7h315t8Q"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-primary-container rounded-full ring-2 ring-surface-container-lowest"></span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest/80 backdrop-blur-md z-40 flex flex-col justify-between p-space-sm"><div class="flex flex-col gap-space-md"><div class="px-space-sm py-space-xs flex items-center justify-between"><span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">PRIMARY VECTORS</span><span class="font-mono-sm text-mono-sm text-outline-variant">SYS.REV 4.8</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm text-headline-sm shadow-[0_0_12px_rgba(0,229,255,0.3)]"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded transition-colors bg-primary-container text-on-primary-container font-headline-sm text-headline-sm shadow-[0_0_12px_rgba(0,229,255,0.3)]" data-path="mission-overview" href="#"><span class="material-symbols-outlined text-lg">dashboard</span><span>Mission Overview (Dashboard)</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="sna-graph-matrix" href="#"><span class="material-symbols-outlined text-lg">hub</span><span>SNA Graph Matrix</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="orbital-satellite-recon" href="#"><span class="material-symbols-outlined text-lg">public</span><span>Orbital Satellite Recon</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="entity-dossier-watchlist" href="#"><span class="material-symbols-outlined text-lg">badge</span><span>Entity Dossier &amp; Watchlist</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="darkweb-social-feeds" href="#"><span class="material-symbols-outlined text-lg">rss_feed</span><span>Darkweb &amp; Social Feeds</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="export-intel-briefing" href="#"><span class="material-symbols-outlined text-lg">ios_share</span><span>Export Intel Briefing</span></a></nav></div><div class="flex flex-col gap-space-xs p-space-sm bg-surface-container-low rounded"><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps text-outline uppercase">SYS LATENCY</span><span class="font-mono-sm text-mono-sm text-primary font-bold">14ms</span></div><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps text-outline uppercase">SEC PROTOCOL</span><span class="font-mono-sm text-mono-sm text-secondary-fixed-dim">AES-256 GCM</span></div><div class="w-full bg-surface-container h-1 rounded overflow-hidden mt-space-xs"><div class="bg-primary-container h-full w-4/5"></div></div><div class="flex items-center justify-between mt-space-xs"><span class="font-mono-sm text-mono-sm text-outline-variant">LINK: STABLE</span><span class="h-1.5 w-1.5 rounded-full bg-primary-container animate-ping"></span></div></div></aside><div class="pl-64"><main class="w-full pt-16 bg-surface min-h-screen px-container-padding"><div class="flex flex-col w-full">
+<!-- Interactive Viewport Canvas & HUD Shell -->
+<div class="relative w-full rounded-lg overflow-hidden bg-surface-container-lowest shadow-2xl min-h-[calc(100vh-5.5rem)] flex flex-col justify-between">
+<!-- BASE LAYER: Geospatial Orbital Imagery Canvas -->
+<div class="absolute inset-0 z-0">
+<img alt="Orbital Reconnaissance Infrared Feed" class="w-full h-full object-cover object-center filter saturate-[1.25] contrast-[1.15]" src="https://lh3.googleusercontent.com/aida/AEtjO1XJot30ZsdCwLDSbflUHzrBR0m9uPjJAgU_-ep736Nf-VWYYvb2EJM2kBKoIXLDNn1f8kXQztxA7f41gbiR30b3V42mDiJAZv76MLv1cJS49-u7qqzP374hobYzTIVrwy_iTO2avGVkRPmZuiHQKRTdO1SRv0zRw-vbFQsOk4hUFrJGZ6f_-JJSIZjPFWex9nK6glD0QzY7Ixja9mtSfRmeo5I87bsj39OI3nMqVhB9Ew99-KYx6XOKYQY"/>
+<!-- Tactical Atmospheric & Scanline Filters -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-surface-container-lowest/80 pointer-events-none"></div>
+<div class="absolute inset-0 bg-radial from-transparent via-background/25 to-surface-container-lowest/90 pointer-events-none"></div>
+<!-- Vector Overlay Reticle: Scanlines & Grid Marks -->
+<div class="absolute inset-0 bg-[linear-gradient(rgba(0,229,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,229,255,0.03)_1px,transparent_1px)] bg-[size:48px_48px] pointer-events-none"></div>
+<!-- Primary Targeting Bounding Boxes & AI Telemetry Tags -->
+<div class="absolute top-[32%] left-[44%] w-48 h-32 pointer-events-none transition-all duration-300">
+<div class="w-full h-full bg-primary-container/5 relative shadow-[0_0_15px_rgba(0,229,255,0.2)]">
+<span class="absolute -top-2 -left-2 text-primary-container text-xs font-mono-sm font-bold">+</span>
+<span class="absolute -top-2 -right-2 text-primary-container text-xs font-mono-sm font-bold">+</span>
+<span class="absolute -bottom-2 -left-2 text-primary-container text-xs font-mono-sm font-bold">+</span>
+<span class="absolute -bottom-2 -right-2 text-primary-container text-xs font-mono-sm font-bold">+</span>
+<!-- Dynamic Cross Center -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 flex items-center justify-center">
+<div class="w-full h-[1px] bg-primary-container/40"></div>
+<div class="h-full w-[1px] bg-primary-container/40 absolute"></div>
+</div>
+<!-- Label Tag -->
+<div class="absolute -top-7 left-0 px-space-xs py-space-2xs bg-surface-container-highest/90 backdrop-blur-md rounded">
+<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">TGT-904 // REFUELING DEPOT</span>
+<span class="font-mono-sm text-mono-sm text-tertiary-fixed-dim block">HEAT SIG: 342.6K [HIGH]</span>
+</div>
+</div>
+</div>
+<!-- Secondary Bounding Box: Vessel -->
+<div class="absolute top-[24%] left-[34%] w-36 h-16 pointer-events-none">
+<div class="w-full h-full bg-error/5 relative shadow-[0_0_12px_rgba(255,180,171,0.2)]">
+<span class="absolute -top-1 -left-1 text-error text-[10px] font-mono-sm font-bold">┌</span>
+<span class="absolute -top-1 -right-1 text-error text-[10px] font-mono-sm font-bold">┐</span>
+<span class="absolute -bottom-1 -left-1 text-error text-[10px] font-mono-sm font-bold">└</span>
+<span class="absolute -bottom-1 -right-1 text-error text-[10px] font-mono-sm font-bold">┘</span>
+<div class="absolute -bottom-6 left-0 px-space-xs py-space-2xs bg-surface-container-highest/90 backdrop-blur-md rounded whitespace-nowrap">
+<span class="font-label-caps text-label-caps text-error tracking-wider uppercase">VESSEL // AIS DARK</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant ml-1">48,200 DWT</span>
+</div>
+</div>
+</div>
+<!-- Third Bounding Box: Container Array -->
+<div class="absolute top-[48%] left-[52%] w-56 h-28 pointer-events-none">
+<div class="w-full h-full bg-secondary-container/10 relative">
+<div class="absolute top-1 right-2 px-space-xs py-space-2xs bg-surface-container-lowest/80 rounded">
+<span class="font-label-caps text-label-caps text-secondary-fixed tracking-wider uppercase">CRANE GANTRY ARRAY 04</span>
+</div>
+</div>
+</div>
+<!-- Viewport Center Reticle HUD Ring -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 pointer-events-none opacity-40">
+<div class="w-full h-full rounded-full bg-gradient-to-r from-transparent via-primary-container/10 to-transparent flex items-center justify-center">
+<div class="w-72 h-72 rounded-full bg-primary-container/5 flex items-center justify-center">
+<div class="w-1.5 h-1.5 bg-primary-container rounded-full animate-ping"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- LAYER 1: Top Geospatial Telemetry Banner & Mode Ribbon -->
+<div class="relative z-20 w-full p-space-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md bg-surface-container-lowest/85 backdrop-blur-md">
+<!-- Coordinate & Orbit Telemetry Core -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-high rounded">
+<span class="material-symbols-outlined text-primary-container text-base">my_location</span>
+<span class="font-mono-md text-mono-md text-primary tracking-wider">36°44'22"N, 121°47'35"W</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container rounded">
+<span class="font-label-caps text-label-caps text-outline uppercase">ALT:</span>
+<span class="font-mono-sm text-mono-sm text-on-surface font-semibold">512.4 KM</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container rounded">
+<span class="font-label-caps text-label-caps text-outline uppercase">GSD:</span>
+<span class="font-mono-sm text-mono-sm text-primary-fixed-dim">0.15 M/PX</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container rounded">
+<span class="font-label-caps text-label-caps text-outline uppercase">AZIMUTH:</span>
+<span class="font-mono-sm text-mono-sm text-on-surface">174.2° SSE</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-high rounded">
+<span class="h-2 w-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-primary-container uppercase">SAT-FEED: SAR-4 LIVE</span>
+</div>
+</div>
+<!-- Spectral View Selector Pill Group -->
+<div class="flex items-center bg-surface-container-low p-space-2xs rounded-lg gap-space-2xs overflow-x-auto max-w-full">
+<button class="px-space-sm py-space-xs rounded font-label-caps text-label-caps uppercase transition-all bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center gap-space-2xs" type="button">
+<span class="material-symbols-outlined text-sm">radar</span>
+<span>SAR</span>
+</button>
+<button class="px-space-sm py-space-xs rounded font-label-caps text-label-caps uppercase transition-all bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center gap-space-2xs" type="button">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+<span>EO-RGB</span>
+</button>
+<button class="px-space-sm py-space-xs rounded font-label-caps text-label-caps uppercase transition-all bg-primary-container text-on-primary-container font-bold shadow-[0_0_12px_rgba(0,229,255,0.4)] flex items-center gap-space-2xs" type="button">
+<span class="material-symbols-outlined text-sm">thermostat</span>
+<span>FLIR (MWIR)</span>
+</button>
+<button class="px-space-sm py-space-xs rounded font-label-caps text-label-caps uppercase transition-all bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center gap-space-2xs" type="button">
+<span class="material-symbols-outlined text-sm">blur_linear</span>
+<span>HYPERSPEC</span>
+</button>
+<button class="px-space-sm py-space-xs rounded font-label-caps text-label-caps uppercase transition-all bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center gap-space-2xs" type="button">
+<span class="material-symbols-outlined text-sm">cell_tower</span>
+<span>SIGINT COMB</span>
+</button>
+</div>
+<!-- Quick Viewport Actions -->
+<div class="hidden xl:flex items-center gap-space-xs">
+<button class="p-space-xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" title="Center on Anchor" type="button">
+<span class="material-symbols-outlined text-base">filter_center_focus</span>
+</button>
+<button class="p-space-xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" title="Toggle Fullscreen Canvas" type="button">
+<span class="material-symbols-outlined text-base">fullscreen</span>
+</button>
+<button class="p-space-xs rounded bg-surface-container hover:bg-surface-container-high text-primary-container transition-colors" title="Calibrate Sensors" type="button">
+<span class="material-symbols-outlined text-base">tune</span>
+</button>
+</div>
+</div>
+<!-- LAYER 2: Tactical Mid-Dock Floating Panels (Left: Constellation Rail / Right: Target Inspection) -->
+<div class="relative z-10 w-full px-space-md py-space-sm flex-1 flex flex-col lg:flex-row justify-between pointer-events-none gap-space-lg">
+<!-- LEFT FLOATING DOCK: Active Constellation Telemetry Rail -->
+<div class="w-full lg:w-80 pointer-events-auto flex flex-col gap-space-sm">
+<!-- Constellation Header Card -->
+<div class="bg-surface-container-lowest/90 backdrop-blur-md rounded p-space-sm shadow-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base">satellite</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Orbital Assets</span>
+</div>
+<span class="px-space-xs py-space-2xs bg-surface-container-high rounded font-mono-sm text-mono-sm text-primary">4 IN-VIEW</span>
+</div>
+<!-- Constellation Unit 1: Active SAR-4 -->
+<div class="p-space-sm bg-surface-container-high/90 rounded flex flex-col gap-space-xs shadow-[0_0_10px_rgba(0,229,255,0.15)]">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="h-2 w-2 rounded-full bg-primary-container"></span>
+<span class="font-mono-md text-mono-md text-primary font-bold">SAR-4 (SENTINEL-1D)</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary-container uppercase">LOCKED</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs font-mono-sm text-mono-sm text-on-surface-variant">
+<div>EL: <span class="text-on-surface">68.4°</span></div>
+<div>PASS REM: <span class="text-primary font-semibold">00:06:21</span></div>
+<div>DL RATE: <span class="text-on-surface">850 Mbps</span></div>
+<div>BAND: <span class="text-on-surface">C-Band Synthetic</span></div>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden mt-space-2xs">
+<div class="bg-primary-container h-full w-3/4"></div>
+</div>
+</div>
+<!-- Constellation Unit 2: SKY-SAT-7 -->
+<div class="p-space-sm bg-surface-container/60 hover:bg-surface-container/90 transition-colors rounded flex flex-col gap-space-xs cursor-pointer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-mono-md text-mono-md text-on-surface">SKY-SAT-7 (SUB-METER)</span>
+</div>
+<span class="font-label-caps text-label-caps text-tertiary-fixed-dim uppercase">AOS IN 18M</span>
+</div>
+<div class="flex justify-between font-mono-sm text-mono-sm text-outline">
+<span>FOV: 5.5 KM</span>
+<span>ORBIT: 450 KM SSO</span>
+</div>
+</div>
+<!-- Constellation Unit 3: WORLDVIEW-4 -->
+<div class="p-space-sm bg-surface-container/60 hover:bg-surface-container/90 transition-colors rounded flex flex-col gap-space-xs cursor-pointer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="h-1.5 w-1.5 rounded-full bg-outline"></span>
+<span class="font-mono-md text-mono-md text-on-surface">WORLDVIEW-4 (MULTI-SPEC)</span>
+</div>
+<span class="font-label-caps text-label-caps text-outline uppercase">AOS IN 44M</span>
+</div>
+<div class="flex justify-between font-mono-sm text-mono-sm text-outline">
+<span>GSD: 0.31 M</span>
+<span>TASK: STANDBY</span>
+</div>
+</div>
+</div>
+<!-- Sensor Tuning Controls Panel -->
+<div class="bg-surface-container-lowest/90 backdrop-blur-md rounded p-space-sm shadow-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">OPTICAL TUNING &amp; ATMOSPHERE</span>
+<span class="material-symbols-outlined text-primary text-sm">adjust</span>
+</div>
+<!-- Thermal Palette Switcher -->
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">FALSE COLOR PALETTE</span>
+<div class="grid grid-cols-4 gap-space-xs">
+<button class="px-space-xs py-space-2xs bg-primary-container text-on-primary-container font-mono-sm text-mono-sm rounded font-bold shadow-sm" type="button">IRONBOW</button>
+<button class="px-space-xs py-space-2xs bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-mono-sm text-mono-sm rounded" type="button">B-HOT</button>
+<button class="px-space-xs py-space-2xs bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-mono-sm text-mono-sm rounded" type="button">W-HOT</button>
+<button class="px-space-xs py-space-2xs bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-mono-sm text-mono-sm rounded" type="button">COOL-CYAN</button>
+</div>
+</div>
+<!-- Cloud Penetration & Gain Sliders -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center font-mono-sm text-mono-sm">
+<span class="text-on-surface-variant">CLOUD PENETRATION</span>
+<span class="text-primary font-bold">94% [ACTIVE]</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[94%]"></div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center font-mono-sm text-mono-sm">
+<span class="text-on-surface-variant">FLIR SENSOR GAIN (MWIR)</span>
+<span class="text-tertiary-fixed-dim font-bold">+18.5 dB</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary-fixed-dim h-full w-[65%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT FLOATING DOCK: Tactical Target Inspector & AI Classification -->
+<div class="w-full lg:w-96 pointer-events-auto flex flex-col gap-space-sm">
+<!-- Live Alert Banner -->
+<div class="p-space-sm bg-error-container/80 backdrop-blur-md rounded flex items-center justify-between text-on-error-container shadow-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-lg animate-pulse">warning</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-error font-bold uppercase tracking-wider">GEO-BREACH DETECTION</span>
+<span class="font-mono-sm text-mono-sm text-on-error-container">UNREGISTERED DISPLACEMENT DETECTED</span>
+</div>
+</div>
+<span class="font-mono-sm text-mono-sm px-space-xs py-space-2xs bg-surface-container-lowest/50 rounded text-error font-bold">CRIT 1</span>
+</div>
+<!-- Target Watchlist Dossier Window -->
+<div class="bg-surface-container-lowest/90 backdrop-blur-md rounded p-space-sm shadow-xl flex flex-col gap-space-sm max-h-[460px] overflow-y-auto">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base">center_focus_strong</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Target Entities</span>
+</div>
+<span class="font-mono-sm text-mono-sm text-outline">SECTOR 7G</span>
+</div>
+<!-- Target Card 1: Marine Vessel -->
+<div class="p-space-sm bg-surface-container-high/70 hover:bg-surface-container-high rounded transition-colors flex flex-col gap-space-xs cursor-pointer group">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">M/V CAPE ODYSSEY</span>
+<span class="font-mono-sm text-mono-sm text-error">AIS TRANSPONDER: OFFLINE</span>
+</div>
+<span class="px-space-xs py-space-2xs bg-error/20 text-error rounded font-label-caps text-label-caps uppercase">DARK VESSEL</span>
+</div>
+<div class="grid grid-cols-2 gap-space-2xs font-mono-sm text-mono-sm text-on-surface-variant mt-space-2xs">
+<span>LENGTH: 228M</span>
+<span>DRAFT: 14.1M</span>
+<span>LAST SEEN: ROTTERDAM</span>
+<span class="text-tertiary-fixed-dim">DISP: 48,200 DWT</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-space-2xs">
+<span class="font-mono-sm text-mono-sm text-outline">LAT: 36.7419 N</span>
+<button class="text-primary hover:underline font-label-caps text-label-caps flex items-center gap-space-2xs uppercase" type="button">
+<span>RE-ACQUIRE</span>
+<span class="material-symbols-outlined text-xs">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Target Card 2: Industrial Terminal Thermal Anomaly -->
+<div class="p-space-sm bg-surface-container-high/70 hover:bg-surface-container-high rounded transition-colors flex flex-col gap-space-xs cursor-pointer group">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">FACILITY ECHO // DEPOT</span>
+<span class="font-mono-sm text-mono-sm text-tertiary-fixed-dim">HEAT SPIKE: +34.2°C DELTA</span>
+</div>
+<span class="px-space-xs py-space-2xs bg-tertiary-container text-on-tertiary-container rounded font-label-caps text-label-caps uppercase font-semibold">THERMAL SURGE</span>
+</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">
+              Elevated thermal footprint across secondary fuel vaults indicating unannounced liquid fuel transfer operations.
+            </div>
+<div class="flex items-center justify-between pt-space-xs mt-space-2xs">
+<span class="font-mono-sm text-mono-sm text-primary">CONFIDENCE: 98.4%</span>
+<button class="text-primary hover:underline font-label-caps text-label-caps flex items-center gap-space-2xs uppercase" type="button">
+<span>INSPECT FLIR</span>
+<span class="material-symbols-outlined text-xs">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Target Card 3: Convoy Vector -->
+<div class="p-space-sm bg-surface-container-high/70 hover:bg-surface-container-high rounded transition-colors flex flex-col gap-space-xs cursor-pointer group">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">CONVOY VECTOR 12</span>
+<span class="font-mono-sm text-mono-sm text-primary-container">VELOCITY: 38 KM/H // HEADING 278°</span>
+</div>
+<span class="px-space-xs py-space-2xs bg-surface-container-lowest text-outline rounded font-label-caps text-label-caps uppercase">TRACKED</span>
+</div>
+<div class="flex justify-between font-mono-sm text-mono-sm text-on-surface-variant">
+<span>6 UNITS (4-AXLE LOGISTICS)</span>
+<span>DST TO PIER: 1.4 KM</span>
+</div>
+</div>
+</div>
+<!-- Tactical Measurement Tool Float -->
+<div class="p-space-sm bg-surface-container-lowest/90 backdrop-blur-md rounded flex items-center justify-between text-on-surface shadow-md">
+<div class="flex items-center gap-space-xs font-mono-sm text-mono-sm">
+<span class="material-symbols-outlined text-primary text-base">square_foot</span>
+<span>RULER: <strong class="text-primary">1,480.2 M</strong> (BEARING 118°)</span>
+</div>
+<button class="px-space-xs py-space-2xs bg-surface-container hover:bg-surface-container-high rounded font-label-caps text-label-caps text-primary uppercase" type="button">RESET TOOL</button>
+</div>
+</div>
+</div>
+<!-- LAYER 3: Bottom Tactical Change-Detection Timeline & Zulu Analysis Bar -->
+<div class="relative z-20 w-full p-space-md bg-surface-container-lowest/95 backdrop-blur-md flex flex-col gap-space-sm">
+<!-- Time Delta Scrubber Controls -->
+<div class="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<!-- Timeline Navigation Steps -->
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-lg">history</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">CHANGE-DETECTION TIMELINE:</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-space-xs bg-surface-container hover:bg-surface-container-high rounded font-mono-sm text-mono-sm text-outline-variant hover:text-on-surface transition-colors flex items-center gap-space-2xs" type="button">
+<span>0200Z</span>
+<span class="text-[10px] text-outline">[BASE]</span>
+</button>
+<span class="text-outline-variant font-mono-sm">→</span>
+<button class="px-space-sm py-space-xs bg-primary-container text-on-primary-container font-mono-sm text-mono-sm rounded font-bold shadow-[0_0_10px_rgba(0,229,255,0.4)] flex items-center gap-space-2xs" type="button">
+<span class="h-1.5 w-1.5 rounded-full bg-surface-container-lowest animate-pulse"></span>
+<span>0800Z</span>
+<span class="text-[10px]">[T-0 CURRENT]</span>
+</button>
+<span class="text-outline-variant font-mono-sm">→</span>
+<button class="px-space-sm py-space-xs bg-surface-container hover:bg-surface-container-high rounded font-mono-sm text-mono-sm text-on-surface transition-colors flex items-center gap-space-2xs" type="button">
+<span>1400Z</span>
+<span class="text-[10px] text-tertiary-fixed-dim">[PREDICTED]</span>
+</button>
+</div>
+</div>
+<!-- Slider Bar Visualizer -->
+<div class="flex-1 max-w-md w-full flex items-center gap-space-sm">
+<span class="font-mono-sm text-mono-sm text-outline">T-6h</span>
+<div class="relative flex-1 bg-surface-container h-2 rounded-full cursor-pointer">
+<div class="absolute left-0 top-0 bottom-0 w-2/3 bg-primary-container rounded-full"></div>
+<div class="absolute left-2/3 -top-1.5 -translate-x-1/2 w-5 h-5 rounded-full bg-primary-container shadow-[0_0_10px_rgba(0,229,255,0.8)] border-2 border-surface-container-lowest"></div>
+</div>
+<span class="font-mono-sm text-mono-sm text-primary font-bold">LIVE (T-0)</span>
+</div>
+<!-- Split View Toggle -->
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-space-xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase flex items-center gap-space-2xs transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">view_column</span>
+<span>SPLIT DELTA (T-6 vs T-0)</span>
+</button>
+</div>
+</div>
+<!-- Tactical Analytics Bar & Action Cluster -->
+<div class="w-full flex flex-col lg:flex-row items-center justify-between gap-space-md pt-space-xs">
+<!-- Deep Telemetry Indicators -->
+<div class="flex flex-wrap items-center gap-space-md text-on-surface-variant font-mono-sm text-mono-sm">
+<div class="flex items-center gap-space-2xs">
+<span class="font-label-caps text-label-caps text-outline uppercase">AI MODEL:</span>
+<span class="text-primary font-bold">YOLOV8-SAT-DEFENSE // CONF: 98.4%</span>
+</div>
+<span class="text-outline-variant">|</span>
+<div class="flex items-center gap-space-2xs">
+<span class="font-label-caps text-label-caps text-outline uppercase">TELEMETRY LATENCY:</span>
+<span class="text-secondary-fixed-dim">18 MS (RELAY LEO-3)</span>
+</div>
+<span class="text-outline-variant">|</span>
+<div class="flex items-center gap-space-2xs">
+<span class="font-label-caps text-label-caps text-outline uppercase">SUN ELEVATION:</span>
+<span class="text-on-surface">14.2° AZ</span>
+</div>
+</div>
+<!-- Primary Operational Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="px-space-md py-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-headline-sm text-headline-sm transition-all flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-base">hub</span>
+<span>Correlate with SNA Network</span>
+</button>
+<button class="px-space-md py-space-sm rounded bg-surface-container hover:bg-surface-container-high text-primary font-headline-sm text-headline-sm transition-all flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Export High-Res GeoTIFF</span>
+</button>
+<button class="px-space-md py-space-sm rounded bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-bold shadow-[0_0_16px_rgba(0,229,255,0.4)] hover:shadow-[0_0_24px_rgba(0,229,255,0.6)] transition-all flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-base">add_task</span>
+<span>Task Priority Re-Visit</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive script to sync sidebar active state with Orbital Recon view -->
+<script>
+    (function() {
+      // Highlight the Orbital Satellite Recon navigation anchor inside the app shell
+      try {
+        const navLinks = document.querySelectorAll('aside nav a');
+        navLinks.forEach(link => {
+          if (link.getAttribute('data-path') === 'orbital-satellite-recon') {
+            link.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-high');
+            link.classList.add('bg-primary-container', 'text-on-primary-container', 'font-headline-sm', 'shadow-[0_0_12px_rgba(0,229,255,0.3)]');
+          } else {
+            link.classList.remove('bg-primary-container', 'text-on-primary-container', 'shadow-[0_0_12px_rgba(0,229,255,0.3)]');
+            link.classList.add('text-on-surface-variant');
+          }
+        });
+      } catch (e) {
+        console.warn('Navigation highlight sync omitted', e);
+      }
+    })();
+  </script>
+</div></main></div></body></html>
